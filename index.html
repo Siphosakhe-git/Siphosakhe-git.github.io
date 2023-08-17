@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang= "en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name ="viewport" content="width=device-width, intitial-scale = 1.0">
+    <title>My Portfolio Website - Siphosakhe</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/03b7f53da5.js" crossorigin="anonymous"></script>
+</head>
+<body>
+ <div id = "header"
+    <div class = "container">
+        <nav>
+            <img src = "images/logo.png" class="logo">
+            <ul>
+                <li><a href='#header'>Home</a></li>
+                <li><a href='#about'>About</a></li>
+                <li><a href='#My Services'>Services</a></li>
+                <li><a href='#portfolio'>Portfolio</a></li>
+                <li><a href='#contact'>Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Software Developer</p>
+            <h1>Hey, I'm <span>Siphosakhe<span/></h1>
+        </div>
+    </div> 
+ </div>
+
+ <!********************************* About Page**********************************>
+ <div id = "about">
+    <div class="row">
+        <div class="about-col-1">
+            <img src="images/profile-1.jpg">
+        </div>
+        <div class="about-col-2">
+            <h1 class = "subtitle">About Me</h1> 
+            <p>Currently completing a degree in Computer Science from the University of Witwatersrand. 
+                Worked briefly as a software design intern with Coolr, gaining experience with both Front-end and Back-end development. 
+                I am passionate about expanding my programming knowledge and currently well versed in Java, JavaScript, SQL, Python, C, C++, HTML and CSS.  
+                <br><br>
+                Good communication skills allow me to easily integrate with a team where I am eager to grow together as we push towards a shared goal. 
+                I am adaptable and willing to learn new technologies, to enrich myself, and apply them to current projects. 
+            </p>  
+            <div class="tab-titles">
+                <p class = "tab-links active-link" onclick = "opentab('skills')">Skills</p>
+                <p class = "tab-links"onclick = "opentab('experience')">Experience</p>
+                <p class = "tab-links"onclick = "opentab('education')">Education</p>
+
+            </div>
+            <div class="tab-contents active-tab" id = "skills">
+                <ul>
+                    <li><span>UI/UX</span><br>Desigining Website & App interfaces</li>
+                    <li><span>App Development</span><br>Back-end App Development</li>
+                    <li><span>Web Development</span><br>Back-end Website Developmen</li>
+
+                </ul>
+            </div>
+            <div class="tab-contents" id = "experience">
+                <ul>
+                    <li><span>2020</span><br>Junior Software Developer Intern</li>
+                </ul>
+            </div>
+            <div class="tab-contents" id = "education">
+                <ul>
+                    <li><span>2024</span><br>BSc Computer Science from Wits</li>
+                    <li><span>2023</span><br>Azure AI Fundamentals - Certificate from Microsoft</li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+ </div>
+ <!*********************************Services**********************************>
+<div id="My Services">
+    <div class="container">
+        <h1 class = "subtitle">Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code fa-beat" style="color: #fff;"></i>
+                <h2>App Development</h2>
+                <p>Deeply passionate about the intricacies of programming efficient and practical applications. 
+                </p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-regular fa-paper-plane fa-beat" style="color: #fff;"></i>
+                <h2>Web Development</h2>
+                <p>Creating vibrant and interactive webpages, that serve specific purposes.</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-mobile-screen-button fa-beat" style="color: #fff;"></i>
+                <h2>UI/UX Design</h2>
+                <p>Unique designs inspired by modern trends that stand as an example of my creative vision.</p>
+                <a href="#">Learn more</a>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!*********************************Portfolio**********************************>
+<div class="portfolio">
+    <div class="container">
+        <h1 class = "subtitle">My Work</h1>
+        <div class="worklist">
+            <div class="work">
+                <img src="images/work-4.jpg">
+                <div class="layer">
+                    <h3>Task Keeper App</h3>
+                    <p>The app helps you to better manage your daily tasks, set reminders
+                        and talk to a chatbot to automate some features.
+                    </p>
+                    <a href="#"><i class="fa-solid fa-link" style="color: #FFD700;"></i></a>
+                </div>
+                
+                
+            </div>
+             <div class="work">
+                <img src="images/work-2.jpg">
+                <div class="layer">
+                    <h3>Weather App</h3>
+                    <p>The app allows for realtime tracking of weather in your location and 
+                        can sync with a calendar app to forcast your week, or plan your holiday.
+                    </p>
+                    <a href="#"><i class="fa-solid fa-link" style="color: #FFD700;"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-3.jpg">
+                <div class="layer">
+                    <h3>Chat Messenger Website</h3>
+                    <p>The webiste allows users to chat to one another, posting content 
+                        that can be interacted with by the community.
+
+                    </p>
+                    <a href="#"><i class="fa-solid fa-link" style="color: #FFD700;"></i></a>
+                </div>
+            </div>
+
+        </div>
+        <a href="#" class="btn">See more</a>
+
+    </div>
+</div>
+<!*********************************Contact**********************************>
+<div class="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="subtitle">Contact Me</h1>
+                <p><i class="fa-solid fa-at" style="color: #FFD700;"></i>sakhenzalo.sn@gmail.com</p>
+                <p><i class="fa-solid fa-phone" style="color: #FFD700;"></i>(+27)71-660-7692</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/siphosakhe-nzalo-5699231ab"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/sakhe.nzalo/"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+                <a href="" class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form>
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="text" name="email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © Siphosakhe</p>
+    </div>
+    
+</div>
+
+
+
+ <script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabName){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link")
+        }
+        for(tabcontent  of tabcontents){
+            tabcontent.classList.remove("active-tab")
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabName).classList.add("active-tab");
+    }
+ </script>
+</body>
+
+
+</html>
