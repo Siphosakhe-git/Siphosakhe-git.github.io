@@ -308,7 +308,7 @@ form input, form textarea{
     outline: none;
     background: #262626;
     padding: 15px;
-    margin: 15px;
+    margin: 15px 0;
     color: #fff;
     font-size: 18px;
     border-radius: 6px;
@@ -330,10 +330,12 @@ form .btn2{
     margin-top: 20px;
 }
 /*********************************Small Screens**********************************/
-
-/*@media only screen and (max-width: 600px){
+nav .fa-solid{
+    display: none;
+}
+@media only screen and (max-width: 600px){
     #header{
-        background-image: url(/images/phone-profile.JPG);
+        background-image: url(images/phone-profile.jpg);
     }
     .header-text{
         margin-top: 100%;
@@ -342,5 +344,62 @@ form .btn2{
     .header-text h1{
         font-size: 30px;
     }
-}*/
+    nav .fa-solid{
+        display: block;
+        font-size: 25px;
+    }
+    nav ul{
+        background:#B59410 ;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+    nav ul .fa-solid{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
 
+    }
+    .subtitle{
+        font-size: 40px;
+    }
+    .about-col-1, .about-col-2{
+        flex-basis: 75%;
+        
+    }
+    .about-col-1{
+        margin-bottom: 30px;
+        margin-left: 50px;
+    }
+    .about-col-2{
+        font-size: 14px;
+        margin-left: 50px;
+
+    }
+    .tab-links{
+        font-size: 16px;
+        margin-right: 20px;
+    }
+    .contact-left, .contact-right{
+        flex-basis: 100%;
+    }
+    .copyright{
+        font-size: 14px;
+    }
+}
+
+#msg{
+    color:#FFD700;
+    margin-top: -40px;
+    display: block;
+}
