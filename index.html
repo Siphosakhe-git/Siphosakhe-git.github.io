@@ -13,13 +13,15 @@
     <div class = "container">
         <nav>
             <img src = "images/logo.png" class="logo">
-            <ul>
+            <ul id ="sidemenu">
                 <li><a href='#header'>Home</a></li>
                 <li><a href='#about'>About</a></li>
                 <li><a href='#My Services'>Services</a></li>
                 <li><a href='#portfolio'>Portfolio</a></li>
                 <li><a href='#contact'>Contact</a></li>
+                <i class="fa-solid fa-xmark" style="color: #fff;"onclick="closemenu()"> </i>
             </ul>
+            <i class="fa-solid fa-bars" style="color: #fff;" onclick="openmenu()"></i>
         </nav>
         <div class="header-text">
             <p>Software Developer</p>
@@ -102,7 +104,7 @@
     </div>
 </div>
 <!*********************************Portfolio**********************************>
-<div class="portfolio">
+<div id="portfolio">
     <div class="container">
         <h1 class = "subtitle">My Work</h1>
         <div class="worklist">
@@ -146,7 +148,7 @@
     </div>
 </div>
 <!*********************************Contact**********************************>
-<div class="contact">
+<div id="contact">
     <div class="container">
         <div class="row">
             <div class="contact-left">
@@ -157,16 +159,16 @@
                     <a href="https://www.linkedin.com/in/siphosakhe-nzalo-5699231ab"><i class="fa-brands fa-linkedin"></i></a>
                     <a href="https://www.instagram.com/sakhe.nzalo/"><i class="fa-brands fa-instagram"></i></a>
                 </div>
-                <a href="" class="btn btn2">Download CV</a>
+                <a href="images/Resume.pdf" download class="btn btn2">Download CV</a>
             </div>
             <div class="contact-right">
-                <form>
+                <form name ="submit-to-google-sheet">
                     <input type="text" name="Name" placeholder="Your Name" required>
                     <input type="text" name="email" placeholder="Your Email" required>
                     <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
                     <button type="submit" class="btn btn2">Submit</button>
                 </form>
-                
+                <span id="msg" style="color: #fff;"></span>
             </div>
         </div>
     </div>
@@ -193,6 +195,32 @@
         document.getElementById(tabName).classList.add("active-tab");
     }
  </script>
+ <script>
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    } 
+ </script>
+ <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyht3xBpllE2X59ywPJmhWBLCZU8jQQcPaf0QNfZKTW5a7tumBvo4WjiGO4RyMBQyN_3w/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {msg.innerHTML = "Message sent successfully"
+        setTimeout(function(){
+            msg.innerHTML = " "
+        },5000)
+        form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
 </body>
 
 
